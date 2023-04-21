@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2023-19-04-002-group-KalininaXS
+      author: KalininaXS
+      changes:
+        - createTable:
+            tableName: groupcurs
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_group
+              - column:
+                  name: group_curses
+                  type: int
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: year_of_enter
+                  type: int
