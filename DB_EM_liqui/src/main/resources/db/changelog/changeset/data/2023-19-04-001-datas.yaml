@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2023-19-04-001-datas-KalininaXS
+      author: KalininaXS
+      runOnChange: true
+      context: dev
+      changes:
+        - loadUpdateData:
+            primaryKey: id
+            file: group.csv
+            relativeToChangelogFile: true
+            quotchar: '"'
+            separator: ';'
+            encoding: UTF-8
+            tableName: groupcurs
+        - loadUpdateData:
+              primaryKey: id
+              file: stud.csv
+              relativeToChangelogFile: true
+              quotchar: '"'
+              separator: ';'
+              encoding: UTF-8
+              tableName: stud
