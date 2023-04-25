@@ -1,0 +1,18 @@
+pring:
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: test-kafka
+      auto-offset-reset: latest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+    producer:
+      bootstrap-servers: localhost:9092
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+topic:
+  name:
+    producer: topic-test-1
+    consumer: topic-test-1
